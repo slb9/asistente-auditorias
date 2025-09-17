@@ -53,10 +53,8 @@ consulta = st.text_input("¿Qué requerimiento estás buscando?")
 if consulta:
     auditoria, requerimiento, score = buscar_auditoria(consulta)
     if auditoria:
-        st.success(f"**Auditoría encontrada:**
-{auditoria}")
-        st.write(f"**Requerimiento asociado:**
-{requerimiento}")
+        st.success(f"**Auditoría encontrada:** {auditoria}")
+        st.write(f"**Requerimiento asociado:** {requerimiento}")
         st.caption(f"🔎 Similitud: {score:.2f}")
     else:
         st.warning("No se encontró una auditoría relevante para tu consulta. Probá con otras palabras.")
